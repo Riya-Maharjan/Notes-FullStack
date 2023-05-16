@@ -1,7 +1,6 @@
 import Boom from "@hapi/boom";
 
 import Note from "../models/Note.js";
-// import Review from '../models/Review.js';
 import logger from "../utils/logger.js";
 
 /**
@@ -52,12 +51,6 @@ export async function getNote(id) {
 
     throw new Boom.notFound(`Cannot find note with noteId ${id}`);
   }
-
-  // const parsedDesatination = {
-  //   ...note,
-  //   images: note.images ? note.images.split(",") : [],
-  //   reviews: note.reviews ? note.reviews.split(",") : [],
-  // };
 
   return {
     data: note,
